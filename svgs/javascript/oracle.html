@@ -1,0 +1,28 @@
+#include<iostream>
+    #include<string.h>
+    class overloding
+    {
+    public: add(int a,int b)
+    {
+    std::cout<<"integer values\n";
+    int sum=a+b;
+    std::cout<<sum;
+    }
+    public: add(float a,float b)
+    {
+    std::cout<<"float values \n";
+    float sum=a+b;
+    std::cout<<sum;
+    }
+    };
+    int main()
+    {
+    float a,b;
+    std::cout<<"Enter the number ";
+    std::cin>>a;
+    std::cout<<"Enter the number ";
+    std::cin>>b;
+    overloding o0;
+    o0.add((float)a,(float)b);
+    return 0;
+    }
