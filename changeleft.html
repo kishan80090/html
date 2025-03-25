@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image</title>
+    <style>
+        .container-row {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            top: 5%;
+            left: 2%;
+            width: 10%;
+            height: 40%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-row">
+        <img id="img0" style="margin: 5px;" src="bird1.jpg">
+        <img id="img1" style="margin: 5px;" src="bird2.jpg">
+        <img id="img2" style="margin: 5px;" src="bird3.jpg">
+        <img id="img3" style="margin: 5px;" src="bird4.jpg">
+    </div>
+    <script>
+         const n=4;
+function moveImages()
+{
+let lastimage=document.getElementById("img3").src;
+for(let i=n-1;i>=1;i--)
+{
+    document.getElementById(`img${i}`).src=document.getElementById(`img${(i-1)}`).src;
+    console.log( `img${i}`);
+    console.log(`img${(i-1)}`);
+}
+    document.getElementById(`img0`).src=lastimage;
+
+
+}
+let loop =setInterval(moveImages,1000)
+    </script>
+</body>
+</html>

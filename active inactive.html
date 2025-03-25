@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS using Javascript</title>
+    <style>
+        .active {
+            border-style: ridge;
+            border-color: green;
+            border-width: 2px;
+        }
+        .inactive {
+            border-style: ridge;
+            border-color: red;
+            border-width: 2px;
+        } 
+        .add1{
+            background-color: aqua;  
+        }
+        .remove{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="dv">Views The Text</div><br>
+    <button class="active">Active</button>
+    <button class="inactive">Inactive</button><br><br>
+    <input type="text" id="txtcolor"><br><br>
+    <button onclick="setClass()">Set Class</button>
+    <button onclick="Addclass()">Add1</button>
+    <button onclick="Removeclass()">Remove</button>
+    <script>
+        const txtclassname = document.getElementById("txtcolor");
+        const dvoutput = document.getElementById("dv");
+        function setClass() {
+            const newclass = txtclassname.value;
+            dvoutput.classList.add(newclass);
+        }
+        const txtclass = document.getElementById("txtcolor");
+        const A = document.getElementById("dv");
+        function Addclass() {
+        const newclass = txtclassname.value;
+         A.classList.add(newclass);
+        }
+        const text = document.getElementById("txtcolor");
+        const R = document.getElementById("dv");
+        function Removeclass() {
+         const newclass = txtclassname.value;
+            R.classList.add(newclass);
+        }
+    </script>
+</body>
+</html>

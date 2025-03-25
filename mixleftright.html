@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image</title>
+    <style>
+        .container-row {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            top: 7%;
+            left: 20%;
+            width: 5%;
+            height: 40%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-row">
+        <img id="img0" style="margin: 5px;" src="0image.jpg">
+        <img id="img1" style="margin: 5px;" src="1image.jpg">
+        <img id="img2" style="margin: 5px;" src="2image.jpg">
+        <img id="img3" style="margin: 5px;" src="3image.jpg">
+    </div>
+    <div style="margin-top: 20%;" class="container-row">
+        <img id="t0" style="margin: 5px;" src="0image.jpg">
+        <img id="t1" style="margin: 5px;" src="1image.jpg">
+        <img id="t2" style="margin: 5px;" src="2image.jpg">
+        <img id="t3" style="margin: 5px;" src="3image.jpg">
+    </div>
+    <script>
+         const n=4;
+function moveImages()
+{
+let lastimage=document.getElementById("img3").src;
+for(let i=n-1;i>=1;i--)
+{
+    document.getElementById(`img${i}`).src=document.getElementById(`img${(i-1)}`).src;
+}
+    document.getElementById(`img0`).src=lastimage;
+    let firstImage=document.getElementById("t0").src;
+for(let i=0;i< n-1;i++)
+{
+    document.getElementById(`t${i}`).src=document.getElementById(`t${(i+1)}`).src;
+}
+    document.getElementById(`t3`).src=firstImage;
+}
+let loop =setInterval(moveImages,1000)
+    </script>
+</body>
+</html>
