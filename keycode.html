@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<textarea onkeypress="f(event)"></textarea>
+<p id="demo"></p>
+<script>
+function f(event) {
+  var x =  event.keyCode;
+  var y=String.fromCharCode(x);
+  document.getElementById("demo").innerHTML = "The Unicode value is: " + x + y;
+}
+</script>
+</body>
+</html>

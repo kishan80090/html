@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function search() 
+        {
+            let searchvalue = document.getElementById("txt").value.toLowerCase().trim();
+            let chiraigaon = document.getElementsByTagName("div");
+            let n = 0;
+            // console.log(chiraigaon);
+            console.log(searchvalue);
+            for (let i = 0; i <= chiraigaon.length - 1; i++) 
+            {
+                let t = chiraigaon[i].innerText;
+                t = t.toLowerCase().trim();
+                console.log(t);
+                console.log(searchvalue);
+                if (t.includes(searchvalue))
+                 {
+                    chiraigaon[i].style.display = "block";
+                    n++;
+                }
+                else
+                 {
+                    chiraigaon[i].style.display = "none";
+                }
+                document.title = n - 1;
+            }
+        }
+    </script>
+    <style>
+        .ab {
+
+            border: 2px solid black;
+            width: 500px;
+            text-align: center;
+            background-color: beige;
+            margin-right: 50px;
+            font-weight: bold;
+            font-size: 50px;
+        }
+
+        .bs {
+            border: 2px solid black;
+            text-align: center;
+            background-color: whitesmoke;
+            font-size: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <input id="txt" type="text" placeholder="search movie" onkeyup="search()" onchange="search()" class="bs"><br>
+    <div>
+        <div class="ab">Sole </div><br>
+        <div class="ab">Shivay</div><br>
+        <div class="ab">Mard</div><br>
+        <div class="ab">Kaliya</div><br>
+        <div class="ab">Devadas</div><br>
+        <div class="ab">Bagi</div><br>
+        <div class="ab">Pushpa2</div><br>
+        <div class="ab">Eagle</div><br>
+        <DIV class="ab">Bhotanath</DIV>
+    </div>
+</body>
+
+</html>

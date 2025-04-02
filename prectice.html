@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @keyframes rotate{
+      0%{background-color: chartreuse; width: 5px; left: 0%;}
+      50%{ background-color: blue; left: 90%;}
+      100%{ background-color: darkred; left: 0%;}
+    }
+    .boll{
+      width: 50px;
+      height: 50px;
+      background-color: aqua;
+      /* transform-style: preserve-3d; */
+      border-radius: 50%;
+      animation: rotate 10s infinite;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div  class="boll">
+
+  </div>
+</body>
+</html>

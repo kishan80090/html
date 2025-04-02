@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  .aqua{
+    background-color:aqua;
+  }
+  .blue{
+    background-color: blue;
+  }
+  .red{
+    background-color: red;
+  }
+  .chartreuse{
+    background-color: chartreuse;
+  }
+</style>
+<script>
+function show()
+    {
+      var elements=document.getElementsByClassName("aqua");
+      var n=elements.length;
+      for(var i=0;i<=n-1;i++)
+    {
+      elements[i].value="Aqua";
+    }
+    var elements=document.getElementsByClassName("blue");
+      var n=elements.length;
+      for(var i=0;i<=n-1;i++)
+{
+      elements[i].value="Blue";
+}
+var elements=document.getElementsByClassName("red");
+var n=elements.length;
+for(var i=0;i<=n-1;i++)
+{
+elements[i].value="Red";
+}
+var elements=document.getElementsByClassName("chartreuse");
+var n=elements.length;
+for(var i=0;i<=n-1;i++)
+{
+elements[i].value="Chartresues";
+}
+  }
+  </script>
+</head>
+<body>
+  A<input type="text"class="aqua"><br><br>
+  B<input type="text"class="blue"><br><br>
+  C<input type="text"class="red"><br><br>
+  D<input type="text"class="chartreuse"><br><br>
+  <input type="button"onclick="show()"value="Click here"> 
+</body>
+</html>
