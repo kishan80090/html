@@ -34,67 +34,167 @@
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+    .center{
+      position: absolute;
+      margin-top: 250px;
+      margin-left: 100px;
+      color:white;
 
-    @keyframes moveLeftRight {  
-    0%{background-color: red; left:0%}
-    50%{background-color: black; left: 90%;}
-    100%{ background-color: yellow;left: 0%;}
     }
-    .rotating-circle {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background-color: #f7f1f0;
-      background-image: url('svgs/kishan\ \(3\).jpg');
-      background-size: cover;
-      animation: rotateCircle 10s linear infinite, moveLeftRight 10s ease-in-out infinite;
-      margin: 10px;
-      position: absolute; 
+    .center1{
+      position: absolute;
+      margin-top: 250px;
+      margin-left: 370px;
+      color:white;
     }
 
+    .center2{
+      position: absolute;
+      margin-top: 250px;
+      margin-left: 635px;
+      color:white;
+    }
 
+  
+    .center3{
+      position: absolute;
+      margin-top: 250px;
+      margin-left: 900px;
+      color:white;
+    }
+
+    .center4{
+      position: absolute;
+      margin-top: 250px;
+      margin-left: 1170px;
+      color:white;
+    }
+
+    .center5{
+      position: absolute;
+      margin-top: 520px;
+      margin-left: 100px;
+      color:white;
+    }
+
+    .center6{
+      position: absolute;
+      margin-top: 520px;
+      margin-left: 340px;
+      color:white;
+    }
+
+    .center7{
+      position: absolute;
+      margin-top: 520px;
+      margin-left: 620px;
+      color:white;
+    }
+    
+    .center8{
+      position: absolute;
+      margin-top: 520px;
+      margin-left: 880px;
+      color:white;
+    }
+
+    .center9{
+      position: absolute;
+      margin-top: 520px;
+      margin-left: 1160px;
+      color:white;
+    }
   </style>
 </head>
 <script>
   function Films() {
+
     let move = document.getElementsByTagName("input")[0].value.toLowerCase().trim();
+
     let show = document.getElementsByTagName("input");
+
     let n = show.length;
+
     let count = 0;
+
     console.log(n);
+
     for (let i = 1; i <=n-1; i++) {
+
       let moviename = show[i].title.toLowerCase().trim();
+
       if (moviename.includes(move)) {
+
         show[i].style.display = "block";
+
         count++;
+
       } else {
+
         show[i].style.display = "none";
+
       }
     }
-    document.getElementById("photo").innerHTML = `Movies Count: ${count}`;
+    document.getElementById("photo").innerHTML = `Product Count: ${count}`;
   }
 </script>
-<body style="background-color: rgb(3, 0, 0);">
-  <h1 class="fading-text" style="color: rgb(34, 189, 176);"><center><b>🌸  Welcome  🌸</b></center></h1>
-  <center><input onkeyup="Films()" onchange="Films()" style="height: 30px;width:900px;border-color: darkgreen; border-radius: 1100pc; " type="text" placeholder=" 🔍 Search here for movies..."></center>
-  <p><b style="color:rgb(250, 250, 247);"><center>🐹 ***************************************************************************************** 🐹</center></b></p>
-  <div class="rotating-cube" id="photo" style="color: white;">Movies Count:12</div>
-  <div class="rotating-circle"></div><br><br><br><br><br><br>
-  <a title="sholay" href="https://www.youtube.com/watch?v=TR5Q0gnAPGU">
+<body style="background-color: blue;" >
+
+  <center><h1 style="background-color: aqua;" >Welcome Customer</h1></center>
+    
+
+  <center><input onkeyup="Films()" onchange="Films()" 
+
+    style="height: 35px;width:600px;border-color: darkgreen; text-align: center; font-size:
+
+     20px; margin-top: 30px;text-align: left;" type="text" placeholder=" 🔍 Search here for product..."></center>
+
+  <div class="rotating-cube" id="photo" style="color: white;">Product Count:10</div>
+
     <a title="total" href=" "
-  <div class="col"><br>
-    <input title="sholay" style="margin: 17px; border-radius: 15px;" class="col1" type="image" src="svgs/sole.jpg">
-    <input title="total" style="margin:18px; border-radius: 15px;" class="col1" type="image" src="svgs/total.jpg">
-    <input title="diljale" style="margin:17px; border-radius: 15px;" class="col1" type="image" src="svgs/diljale.jpg">
-    <input title="bagban" style="margin:17px; border-radius: 15px;" class="col1" type="image" src="svgs/bagban.jpg">
-    <input title="gadar" style="margin:17px; border-radius: 15px;" class="col1" type="image" src="svgs/gadar.jpg">
-    <input title="popat" style="margin:15px; border-radius: 15px;" class="col1" type="image" src="svgs/popat.jpg">
-    <input title="robot" style="margin:17px; border-radius: 15px;" class="col1" type="image" src="svgs/robot.jpg">
-    <input title="suryvansam" style="margin:17px; border-radius: 15px;" class="col1" type="image" src="svgs/suryvansam.jpg">
-    <input title="meharbani" style="margin: 30px; border-radius: 15px;" class="col1" type="image" src="svgs/meharbani.jpg">
-    <input title="premnagar" style="margin:30px; border-radius: 15px;" class="col1" type="image" src="svgs/premnagar.jpg">
-    <input title="sahajada" style="margin:30px; border-radius: 15px;" class="col1" type="image" src="svgs/sahajada.jpg">
-    <input title="saazish" style="margin:30px; border-radius: 15px;" class="col1" type="image" src="svgs/sajis.jpg">
+
+  <div class="col"></div>
+
+    <input title="Pen" style="margin: 17px; border-radius:  15px;" class="col1" type="image" src="svgs/Pen.jpg">
+
+    <h3 class="center">Penonic</h3>
+
+    <input title="Usb" style="margin:18px; border-radius: 15px;" class="col1" type="image" src="svgs/Usb.jpg">
+    
+    <h3 class="center1">Usb</h3>
+
+    <input title="Moja" style="margin:20px; border-radius: 15px;" class="col1" type="image" src="svgs/Moja.jpg">
+    
+    <h3 class="center2">Moja</h3>
+
+    <input title="Boll" style="margin:20px; border-radius: 15px;" class="col1" type="image" src="svgs/Boll.jpg">
+    
+    <h3 class="center3">Boll</h3>
+
+    <input title="Phone" style="margin:20px; border-radius: 15px;" class="col1" type="image" src="svgs/Phone.jpg">
+    
+    <h3 class="center4">Mobile</h3>
+
+    <input title="Cream" style="margin:15px; border-radius: 15px;" class="col1" type="image" src="svgs/Cream.jpg">
+    
+    <h3 class="center5">Cream</h3>
+
+    <input title="Facewash" style="margin:20px; border-radius: 15px;" class="col1" type="image" src="svgs/Facewash.jpg">
+
+    <h3 class="center6">Facewash</h3>
+
+    <input title="Fan" style="margin:20px; border-radius: 15px;" class="col1" type="image" src="svgs/Fan.jpg">
+
+    <h3 class="center7">Wall Fan</h3>
+
+    <input title="Laptop" style="margin:15px; border-radius: 15px;" class="col1" type="image" src="svgs/Laptop.jpg">
+
+    <h3 class="center8">Laptop</h3>
+
+    <input title="Notbook" style="margin:20px; border-radius: 15px;" class="col1" type="image" src="svgs/Notbook.jpg">
+
+    <h3 class="center9">Not Book</h3>
+
   </div>
 </body>
 </html>

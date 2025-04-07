@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body class="color">
+    
+        <center><input class="searchbox" onkeyup="Find()" type="text" placeholder="Search here..."></center>
+        <div>
+         <input title="Penonic" class="img" type="image"img src="svgs/Pen.jpg">
+
+         <input title="Notebook" class="img" type="image"img src="svgs/Notbook.jpg">
+
+         <input title="Pensil" class="img" type="image"img src="svgs/Pensil.jpg">
+
+         <input title="Earbird" class="img" type="image"img src="svgs/Earbird.jpg">
+
+         <input title="Usb" class="img" type="image"img src="svgs/Usb.jpg">
+
+         <input title="Moja" class="img" type="image"img src="svgs/Moja.jpg">
+
+         <input title="Phone" class="img" type="image"img src="svgs/Phone.jpg">
+
+         <input title="Mirror" class="img" type="image"img src="svgs/Mirror.jpg">
+
+         <input title="Facewash" class="img" type="image"img src="svgs/Facewash.jpg">
+
+         <input title="Cream" class="img" type="image"img src="svgs/Cream.jpg">
+        </div>
+         <script>
+            function Find() {
+                let move = document.getElementsByTagName("input")[0].value.toLowerCase().trim();
+                let show = document.getElementsByTagName("input");
+                let n = show.length;
+                let count = 0;
+                console.log(n);
+                for (let i = 1; i <=n-1; i++) {
+                  let moviename = show[i].title.toLowerCase().trim();
+                  if (moviename.includes(move)) {
+                    show[i].style.display = "block";
+                    count++;
+                  } else {
+                    show[i].style.display = "none";
+                  }
+                }
+                document.getElementById("photo").innerHTML = `Movies Count: ${count}`;
+              }
+         </script>
+
+        
+    </div>
+</body>
+</html>
