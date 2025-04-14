@@ -1,0 +1,36 @@
+.col{
+    position: absolute;
+    width: 250px;
+    height: 30px;
+    margin-left: 700px;
+    font-size: 17px;
+}
+.col1{
+    position: absolute;
+    width: 250px;
+    height: 30px;
+    margin-left: 380px;
+    font-size: 17px;
+}
+.col2{
+
+    position: absolute;
+    width: 250px;
+    height: 30px;
+    margin-left: 700px;
+    font-size: 17px;
+    margin-top: 50px;  
+}
+.col3{
+
+    position: absolute;
+    width: 250px;
+    height: 30px;
+    margin-left: 380px;
+    font-size: 17px;
+    margin-top: 50px;
+}
+.Login{
+    width: 400px;
+    height: 30px;
+}
