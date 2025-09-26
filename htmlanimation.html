@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bouncing Ball Animation</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .ball {
+      width: 40px;
+      height: 40px;
+      background: radial-gradient(circle at 30% 30%, #ff6f61, #d7263d);
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      animation: bounce 2s ease-in-out infinite, glow 1s infinite alternate;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        top: 0;
+      }
+      50% {
+        top: calc(100vh - 60px);
+      }
+    }
+
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 10px #ff6f61, 0 0 20px #ff6f61;
+      }
+      to {
+        box-shadow: 0 0 20px #ff6f61, 0 0 40px #d7263d;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="ball"></div>
+</body>
+</html>

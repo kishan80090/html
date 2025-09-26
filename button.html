@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <style>
+    .eyes img { width: 50px; }
+    .closed-eyes { display: none; }
+    .closed .open-eyes { display: none; }
+    .closed .closed-eyes { display: inline;}
+    
+  </style>
+</head>
+<body>
+  <div class="eyes" id="eyes">
+    <img src="https://cdn-icons-png.flaticon.com/512/709/709612.png" class="open-eyes">
+    <img src="https://cdn-icons-png.flaticon.com/512/565/565655.png" class="closed-eyes">
+  </div>
+
+  <input type="password" id="pass" placeholder="Password">
+  <button onclick="showPassword()">Show Password</button>
+
+  <script>
+    const pass = document.getElementById("pass");
+    const eyes = document.getElementById("eyes");
+
+    pass.onfocus = () => eyes.classList.add("closed");
+
+    function showPassword() {
+      pass.type = "text";      
+      eyes.classList.remove("closed");  
+    }
+  </script>
+</body>
+</html>

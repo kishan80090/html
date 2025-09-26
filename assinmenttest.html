@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>getElementsByName Example</title>
+</head>
+<body>
+
+  <p>Select your gender:</p>
+ <label> <input type="radio" name="gender" value="Male"> Male </label>
+  <label><input type="radio" name="gender" value="Female"> Female </label>
+
+  <br><br>
+  <button onclick="showSelected()">Submit</button>
+  
+  <p id="result"></p>
+
+  <script>
+    function showSelected() {
+      const genders = document.getElementsByName("gender");
+
+      for (let i = 0; i < genders.length; i++) {
+
+        if (genders[i].checked) {
+    
+          document.getElementById("result").innerText = "You selected: " + genders[i].value;
+        }
+      }
+    }
+  </script>
+</body>
+</html>

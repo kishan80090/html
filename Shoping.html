@@ -5,197 +5,160 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Films Search</title>
   <style>
-    .col{
-      position: static;
+    body {
+      background-color: blue;
+      font-family: Arial, sans-serif;
+    }
+
+    .product-container {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
     }
-    .col1:hover{
-      transform: scale(1.02);
+
+    .product {
+      display: inline-block;
+      text-align: center;
+      color: white;
     }
-    .box{
-      width: 30px;
-      height: 30px;
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+
+    .product img {
+      width: 120px;
+      height: 120px;
+      border-radius: 15px;
+    }
+
+    .rotating-cube {
+      width: 200px;
+      height: 50px;
+      margin: 30px auto;
+      text-align: center;
+      line-height: 50px;
+      color: white;
+      font-weight: bold;
+      background-color: #8e3cb4;
+      animation: rotateAnimation 4s infinite;
     }
 
     @keyframes rotateAnimation {
       0% { transform: rotateX(0) rotateY(0) rotateZ(0); }
-      100% { transform: rotateX(350deg) rotateY(350deg) rotateZ(350deg); }
+      100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
     }
 
-    .rotating-cube {
-      width: 80px;
-      height: 80px;
-      background-color: #8e3cb4;
-      transform-style: preserve-3d;
-      animation: rotateAnimation 4s infinite;
-    }
-    @keyframes rotateCircle {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    .center{
-      position: absolute;
-      margin-top: 250px;
-      margin-left: 100px;
-      color:white;
-
-    }
-    .center1{
-      position: absolute;
-      margin-top: 250px;
-      margin-left: 370px;
-      color:white;
+    input[type="text"] {
+      height: 35px;
+      width: 600px;
+      border: 2px solid rgb(81, 150, 81);
+      padding: 5px 10px;
+      font-size: 20px;
+      margin-top: 30px;
     }
 
-    .center2{
-      position: absolute;
-      margin-top: 250px;
-      margin-left: 635px;
-      color:white;
-    }
-
-  
-    .center3{
-      position: absolute;
-      margin-top: 250px;
-      margin-left: 900px;
-      color:white;
-    }
-
-    .center4{
-      position: absolute;
-      margin-top: 250px;
-      margin-left: 1170px;
-      color:white;
-    }
-
-    .center5{
-      position: absolute;
-      margin-top: 520px;
-      margin-left: 100px;
-      color:white;
-    }
-
-    .center6{
-      position: absolute;
-      margin-top: 520px;
-      margin-left: 340px;
-      color:white;
-    }
-
-    .center7{
-      position: absolute;
-      margin-top: 520px;
-      margin-left: 620px;
-      color:white;
-    }
-    
-    .center8{
-      position: absolute;
-      margin-top: 520px;
-      margin-left: 880px;
-      color:white;
-    }
-
-    .center9{
-      position: absolute;
-      margin-top: 520px;
-      margin-left: 1160px;
-      color:white;
-    }
   </style>
 </head>
-<script>
-  function Films() {
 
-    let move = document.getElementsByTagName("input")[0].value.toLowerCase().trim();
+<body>
 
-    let show = document.getElementsByTagName("input");
+  <center><h1 style="background-color: aqua;">Welcome Customer</h1></center>
 
-    let n = show.length;
+  <center>
+    <input onkeyup="searchProducts()" onchange="searchProducts()" type="text" placeholder="🔍 Search here for product...">
+  </center>
 
-    let count = 0;
+  <div class="rotating-cube" id="photo">Product Count: 10</div>
 
-    console.log(n);
-
-    for (let i = 1; i <=n-1; i++) {
-
-      let moviename = show[i].title.toLowerCase().trim();
-
-      if (moviename.includes(move)) {
-
-        show[i].style.display = "block";
-
-        count++;
-
-      } else {
-
-        show[i].style.display = "none";
-
-      }
-    }
-    document.getElementById("photo").innerHTML = `Product Count: ${count}`;
-  }
-</script>
-<body style="background-color: blue;" >
-
-  <center><h1 style="background-color: aqua;" >Welcome Customer</h1></center>
-    
-
-  <center><input onkeyup="Films()" onchange="Films()" 
-
-    style="height: 35px;width:600px;border-color: rgb(81, 150, 81); text-align: center; font-size:
-
-     20px; margin-top: 30px;text-align: left;" type="text" placeholder=" 🔍 Search here for product..."></center>
-
-  <div class="rotating-cube" id="photo" style="color: white;">Product Count:10</div>
   <center><p style="color: yellow;"><b>Available Product</b></p></center>
 
-    <a title="total" href=" "
+  <div class="product-container" id="productList">
+    <div class="product" title="Penonic Pen">
+      <img src="svgs/Pen.jpg" alt="Pen">
+      <h3>Penonic</h3>
+    </div>
 
-  <div class="col"></div>
+    <div class="product" title="USB Drive">
+      <img src="svgs/Usb.jpg" alt="USB">
+      <h3>USB</h3>
+    </div>
 
-    <input title="Pen" style="margin: 17px; border-radius:  15px;" class="col1" type="image" src="svgs/Pen.jpg">
+    <div class="product" title="Moja Socks">
+      <img src="svgs/Moja.jpg" alt="Moja">
+      <h3>Moja</h3>
+    </div>
 
-    <h3 class="center">Penonic</h3>
+    <div class="product" title="Boll Ball">
+      <img src="svgs/Boll.jpg" alt="Boll">
+      <h3>Boll</h3>
+    </div>
 
-    <input title="Usb" style="margin:18px; border-radius: 15px;" class="col1" type="image" src="svgs/Usb.jpg">
-    
-    <h3 class="center1">Usb</h3>
+    <div class="product" title="Smart Phone">
+      <img src="svgs/Phone.jpg" alt="Phone">
+      <h3>Phone</h3>
+    </div>
 
-    <input title="Moja" style="margin:20px; border-radius: 15px;" class="col1" type="image" src="svgs/Moja.jpg">
-    
-    <h3 class="center2">Moja</h3>
+    <div class="product" title="Skin Cream">
+      <img src="svgs/Cream.jpg" alt="Cream">
+      <h3>Cream</h3>
+    </div>
 
-    <input title="Boll" style="margin:20px; border-radius: 15px;" class="col1" type="image" src="svgs/Boll.jpg">
-    
-    <h3 class="center3">Boll</h3>
+    <div class="product" title="Facewash Gel">
+      <img src="svgs/Facewash.jpg" alt="Facewash">
+      <h3>Facewash</h3>
+    </div>
 
-    <input title="Phone" style="margin:20px; border-radius: 15px;" class="col1" type="image" src="svgs/Phone.jpg">
-    
-    <h3 class="center4">Mobile</h3>
+    <div class="product" title="Wall Fan">
+      <img src="svgs/Fan.jpg" alt="Fan">
+      <h3>Wall Fan</h3>
+    </div>
 
-    <input title="Cream" style="margin:15px; border-radius: 15px;" class="col1" type="image" src="svgs/Cream.jpg">
-    
-    <h3 class="center5">Cream</h3>
+    <div class="product" title="Laptop">
+      <img src="svgs/Laptop.jpg" alt="Laptop">
+      <h3>Laptop</h3>
+    </div>
 
-    <input title="Facewash" style="margin:20px; border-radius: 15px;" class="col1" type="image" src="svgs/Facewash.jpg">
+    <div class="product" title="Notebook">
+      <img src="svgs/Notbook.jpg" alt="Notebook">
+      <h3>Not Book</h3>
+    </div>
 
-    <h3 class="center6">Facewash</h3>
-
-    <input title="Fan" style="margin:20px; border-radius: 15px;" class="col1" type="image" src="svgs/Fan.jpg">
-
-    <h3 class="center7">Wall Fan</h3>
-
-    <input title="Laptop" style="margin:15px; border-radius: 15px;" class="col1" type="image" src="svgs/Laptop.jpg">
-
-    <h3 class="center8">Laptop</h3>
-
-    <input title="Notbook" style="margin:20px; border-radius: 15px;" class="col1" type="image" src="svgs/Notbook.jpg">
-
-    <h3 class="center9">Not Book</h3>
-
+    <div class="product" title="Fan">
+      <img src="svgs/fan1.jpg" alt="Notebook">
+      <h3>Fan</h3>
+    </div>
+    <div class="product" title="Biscuit">
+      <img src="svgs/bis.jpg" alt="Notebook">
+      <h3>Biscuit</h3>
+    </div>
+    <div class="product" title="Notebook">
+      <img src="svgs/Notbook.jpg" alt="Notebook">
+      <h3>Not Book</h3>
+    </div>
   </div>
+
+  <script>
+    function searchProducts() {
+      const searchValue = document.querySelector("input[type='text']").value.toLowerCase().trim();
+      const products = document.querySelectorAll(".product");
+      let count = 0;
+
+      products.forEach(product => {
+        const title = product.getAttribute("title").toLowerCase();
+        if (title.includes(searchValue)) {
+          product.style.display = "inline-block";
+          count++;
+        } else {
+          product.style.display = "none";
+        }
+      });
+
+      document.getElementById("photo").innerText = `Product Count: ${count}`;
+    }
+  </script>
+
 </body>
 </html>

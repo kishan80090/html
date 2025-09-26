@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cl{
+
+            background-color: yellow;
+            height: 150px;
+            width: 300px;
+
+        }
+    </style>
+    <script>
+        function test() {
+            let ts=document.getElementById("input").value;
+            document.getElementById("display").innerHTML= ts;
+        }
+    </script>
+</head>
+<body><center>   <p class="cl" id="display" ></p>
+    <input type="text" id="input" placeholder="white" />
+    <button onclick="test()" >click here</button>
+</center>
+ 
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RRHLK Navbar</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 10px 20px;
+      position: relative;
+      z-index: 1000;
+      width: 100%;
+      max-width: 1200px;
+    }
+    .logo img {
+      height: 50px;
+      margin: auto;
+    }
+
+    .hamburger {
+      font-size: 26px;
+      cursor: pointer;
+      display: none;
+      z-index: 1001;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: black;
+      font-weight: 600;
+    }
+
+    .login-btn {
+      border: 2px solid #f4d03f;
+      padding: 6px 16px;
+      border-radius: 6px;
+      color: #f4d03f;
+      font-weight: bold;
+      background: none;
+      transition: 0.3s;
+    }
+
+    .login-btn:hover {
+      background-color: #f4d03f;
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(to right, #f5c802, #d98e04);
+      color: white;
+      border-radius: 20px;
+      padding: 50px;
+      margin: 25px 0;
+      width: 100%;
+      max-width: 1200px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: margin-top 0.3s ease;
+    }
+
+    .text-content {
+      max-width: 50%;
+    }
+
+    .text-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .text-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #f7f7f7;
+
+    }
+
+    .image-content {
+      display: flex;
+      justify-content: center;
+      max-width: 50%;
+
+    }
+
+    .image-content img {
+      max-width: 500px;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+      @media (max-width: 768px) {
+      .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+      }
+
+      .hamburger {
+        display: block;
+        
+      }
+
+      .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 20px 0;
+        display: none;
+        z-index: 1;
+
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+      }
+
+      .container.menu-open {
+        margin-top: 200px;
+      }
+
+      .text-content,
+      .image-content {
+        max-width: 100%;
+      }
+
+      .image-content {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo">
+      <img src="svgs/arrow.jpg" alt="Logo">
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-links" id="navLinks">
+            <a href="#">Home</a>
+        <a href="#">About Us</a>
+      <a href="#">Make Claim</a>
+      <a href="#">POS Corner</a>
+      <a href="#">Contact Us</a>
+           <a href="#">Admin</a>
+      <button class="login-btn">LOGIN</button>
+    </div>
+  </div>
+
+  <div class="container" id="mainContainer">
+    <div class="text-content">
+      <h1>Ensure Protection For all<br>possible situations</h1>
+      <p>
+        With a strong foundation in industry knowledge, a dedicated team of experts, and innovative technology, 
+        RRHLK consistently delivers prompt, top-tier service tailored to each client’s needs.
+      </p>
+    </div>
+    <div class="image-content">
+      <img src="https://www.rrhlkinsurance.in/assets/images/hero-banner.png" alt="Happy Family">
+    </div>
+  </div>
+
+  <script>
+
+    function toggleMenu()
+    {
+      const navLinks = document.getElementById("navLinks");
+      const container = document.getElementById("mainContainer");
+      navLinks.classList.toggle("active");
+      container.classList.toggle("menu-open");
+    }
+    
+  </script>
+</body>
+</html>
